@@ -1,0 +1,9 @@
+leetcode_data_collector:
+  description: >
+    Get data for a particular leetcode profile {leetcode_link}.
+    Decide that does a user has solved enough leetcode problems of various types and difficulties. Give me a score out of 10 on this leetcode profile based on consistancy and level of questions the user has solved.
+    If the user is best in contests you can give a full score.
+  expected_output: >
+    Only a score out of 10 and the reasons.
+    Give output in json format.
+  agent: leetcode_analyser
