@@ -7,3 +7,12 @@ leetcode_data_collector:
     Only a score out of 10 and the reasons.
     Give output in json format.
   agent: leetcode_analyser
+google_scholar_data_collector:
+  description: >
+    Get data for a particular google scholar profile {google_scholar_link}.
+    Decide that does a user has published papers based on their project and conference they have published the paper. Give me a score out of 10 on this google scholar profile based on number of paper published and where did they published the paper.
+    If the user have more than 5 research paper published in best  conferences you can give a higher score.
+  expected_output: >
+    Only a score out of 10 and the reasons.
+    Give output in json format.
+  agent: google_scholar_analyser

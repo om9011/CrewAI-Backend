@@ -16,7 +16,8 @@ def run():
     Run the crew.
     """
     inputs = {
-        'leetcode_link': 'https://leetcode.com/u/code__HARD/'
+        'leetcode_link': 'https://leetcode.com/u/code__HARD/',
+        'google_scholar_link' : 'https://scholar.google.com/citations?user=xYE0PuUAAAAJ'
     }
     LatestAiDevelopment().crew().kickoff(inputs=inputs)
 

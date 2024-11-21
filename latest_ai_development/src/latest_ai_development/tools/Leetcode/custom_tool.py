@@ -1,7 +1,7 @@
 from crewai.tools import BaseTool
 from typing import Type
 from pydantic import BaseModel, Field
-from latest_ai_development.tools.leetcode_graphql import retrieve_leetcode_data
+from latest_ai_development.tools.Leetcode.leetcode_graphql import retrieve_leetcode_data
 
 
 class MyCustomToolInput(BaseModel):

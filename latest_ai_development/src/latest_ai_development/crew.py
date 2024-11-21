@@ -2,7 +2,7 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 
 # Uncomment the following line to use an example of a custom tool
-from latest_ai_development.tools.custom_tool import MyCustomTool
+from latest_ai_development.tools.Leetcode.custom_tool import MyCustomTool
 
 # Check our tools documentations for more information on how to use them
 # from crewai_tools import SerperDevTool
@@ -21,6 +21,13 @@ class LatestAiDevelopment():
 			tools=[MyCustomTool()], # Example of custom tool, loaded on the beginning of file
 			verbose=True
 		)
+	@agent
+	def google_scholar_analyser(self) -> Agent:  # Define google_scholar_analyser
+		return Agent(
+			config=self.agents_config['google_scholar_analyser'],
+			verbose=True
+		)
+
 
 	# @agent
 	# def reporting_analyst(self) -> Agent:
@@ -34,7 +41,11 @@ class LatestAiDevelopment():
 		return Task(
 			config=self.tasks_config['leetcode_data_collector'],
 		)
-
+	@task
+	def google_scholar_data_collector(self) -> Task:  # Define google_scholar_data_collector
+		return Task(
+			config=self.tasks_config['google_scholar_data_collector'],
+		)
 	# @task
 	# def reporting_task(self) -> Task:
 	# 	return Task(
