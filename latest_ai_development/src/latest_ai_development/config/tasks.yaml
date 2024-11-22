@@ -1,18 +1,39 @@
 leetcode_data_collector:
   description: >
-    Get data for a particular leetcode profile {leetcode_link}.
-    Decide that does a user has solved enough leetcode problems of various types and difficulties. Give me a score out of 10 on this leetcode profile based on consistancy and level of questions the user has solved.
-    If the user is best in contests you can give a full score.
+    Collect and analyze data for a specific LeetCode profile at {leetcode_link}.
+    Evaluate whether the user has solved enough problems across various types and difficulties.
+    Provide a score out of 10 based on consistency, problem diversity, and difficulty levels.
+    If the user excels in contests / has given many contests , a full score can be awarded.
+
   expected_output: >
-    Only a score out of 10 and the reasons.
-    Give output in json format.
-  agent: leetcode_analyser
-google_scholar_data_collector:
+    Provide only a score out of 10 with detailed reasoning. 
+    The output should be formatted as JSON for structured integration.
+
+  agent: candidate_manager
+
+
+scholar_data_collector:
   description: >
-    Get data for a particular google scholar profile {google_scholar_link}.
-    Decide that does a user has published papers based on their project and conference they have published the paper. Give me a score out of 10 on this google scholar profile based on number of paper published and where did they published the paper.
-    If the user have more than 5 research paper published in best  conferences you can give a higher score.
+    Analyze the candidate's Google Scholar profile at {scholar_link}. ( The part ahead of user= in the link is the authorId )
+    Assess them according to the number of publications, citations, and research impact.
   expected_output: >
-    Only a score out of 10 and the reasons.
-    Give output in json format.
-  agent: google_scholar_analyser
+    A score out of 10, with reasons in JSON format.
+  agent: candidate_manager
+
+
+linkedin_data_collector:
+  description: >
+    Analyze the candidate's LinkedIn profile at {linkedin_link}.( Last part of the link is the linkedin username )
+    Assess professional experience, skills, endorsements, and alignment with the job role.
+  expected_output: >
+    A score out of 10 for professional experience and networking, with reasons in JSON format.
+  agent: candidate_manager
+
+
+github_data_collector:
+  description: >
+    Analyze the candidate's GitHub profile at {github_link}.
+    Assess the quality and variety of projects, contribution frequency, and technical depth.
+  expected_output: >
+    A score out of 10 for technical project work and collaboration, with reasons in JSON format.
+  agent: candidate_manager

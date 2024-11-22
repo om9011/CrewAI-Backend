@@ -16,8 +16,11 @@ def run():
     Run the crew.
     """
     inputs = {
-        'leetcode_link': 'https://leetcode.com/u/code__HARD/',
-        'google_scholar_link' : 'https://scholar.google.com/citations?user=xYE0PuUAAAAJ'
+        # 'leetcode_link': 'https://leetcode.com/u/code__HARD/',
+        'leetcode_link': 'https://leetcode.com/u/omgujarathi/',
+        'scholar_link' : 'https://scholar.google.com/citations?user=xYE0PuUAAAAJ',
+        'linkedin_link': 'https://www.linkedin.com/in/omgujarathi/',
+        'github_link' : 'https://github.com/Om-Gujarathi'
     }
     LatestAiDevelopment().crew().kickoff(inputs=inputs)
 
